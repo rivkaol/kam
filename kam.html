@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איזה כיף שאת נשארת איתנו! | רבקה הולצברג</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-green: #1B4D3E;
+            --luxury-gold: #D4AF37; 
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F1D382 50%, #D4AF37 100%);
+            --bg-cream: #FCFAF7;
+            --text-dark: #1B4D3E; 
+            --white-glass: rgba(255, 255, 255, 0.95);
+            --border-light: rgba(27, 77, 62, 0.1);
+            --shadow-premium: 0 15px 45px rgba(0,0,0,0.06);
+            --whatsapp-green: #25D366;
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            font-size: 20px; 
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: radial-gradient(var(--deep-green) 0.5px, transparent 0.5px);
+            background-size: 60px 60px;
+            background-attachment: fixed;
+        }
+
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .thank-you-card {
+            background: var(--white-glass);
+            border-radius: 40px;
+            padding: 60px 40px;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid #fff;
+            text-align: center;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        /* סמל לב משודרג ויוקרתי */
+        .icon-header {
+            width: 100px;
+            height: 100px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+            position: relative;
+        }
+
+        .icon-header svg {
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--deep-green);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-wrap: balance;
+        }
+
+        .content-text {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+
+        .highlight-box {
+            background: #FDF9F0;
+            border-right: 4px solid var(--luxury-gold);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: right;
+            border-radius: 0 15px 15px 0;
+            font-size: 1.15rem;
+        }
+
+        .action-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .special-section {
+            padding: 30px;
+            background: #fff;
+            border: 2px solid var(--luxury-gold);
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+        }
+
+        .section-label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--deep-green);
+        }
+
+        /* כפתור הסטטוסים המיוחד */
+        .status-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--gold-gradient);
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.4rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 12px 24px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .status-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        /* כפתור הווטסאפ לקבוצה */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--whatsapp-green);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+            border: none;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-icon {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            opacity: 0.6;
+            margin-top: auto;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .thank-you-card {
+                padding: 40px 20px;
+                border-radius: 30px;
+            }
+            h1 { font-size: 1.9rem; }
+            .content-text { font-size: 1.15rem; }
+            .status-btn { font-size: 1.2rem; padding: 18px 25px; }
+            .whatsapp-btn { font-size: 1.1rem; padding: 15px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <main class="thank-you-card">
+        <div class="icon-header">
+            <!-- לב יוקרתי ומעוצב -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </div>
+
+        <h1>איזה כיף שאת נשארת איתנו!</h1>
+        
+        <div class="content-text">
+            <p>שמחתי מאוד לראות שלחצת על הקישור.</p>
+            <p style="margin-top: 15px;">הבחירה שלך להמשיך להשקיע בבריאות ובשקט הפנימי שלך היא השלב הראשון בשינוי עמוק.</p>
+            
+            <div class="highlight-box">
+                המתכונים הבריאים, הטיפים לעיכול טוב יותר וההשראה מהמטבח שלי ימשיכו להגיע אלייך למייל בדיוק כמו קודם.
+            </div>
+        </div>
+
+        <div class="action-sections">
+            <!-- כפתור הסטטוסים המיוחד -->
+            <div class="special-section">
+                <span class="section-label">מזמינה אותך לקבל ממני השראה יומיומית וטיפים נוספים ישירות לנייד:</span>
+                <a href="https://wa.me/504207702?text=היי+אני+רוצה+לצפות+בסטטוסים+שלך+השם+שלי+הוא+" class="status-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    לחצי כאן לצפייה בסטטוסים שלי
+                </a>
+            </div>
+
+            <!-- הצטרפות לקבוצה -->
+            <div style="margin-top: 10px;">
+                <span class="section-label" style="font-size: 1rem; opacity: 0.8;">וזו הקבוצה השקטה שלנו בווטסאפ:</span>
+                <a href="https://chat.whatsapp.com/FSpnoPs0ALA7I4MGjuF5ZI" class="whatsapp-btn" target="_blank">
+                    <svg class="btn-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.634 1.437h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    הצטרפות לקבוצה
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © רבקה הולצברג - בריאות שבאה מהטבע | כל הזכויות שמורות
+    </footer>
+</div>
+
+</body>
+</html>
